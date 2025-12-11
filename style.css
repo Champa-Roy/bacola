@@ -140,9 +140,31 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Bottom Small Banners */
+.category-banner-small {
+    grid-column: span 4;
+    height: 260px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
 .banner-bread {
     background-image: url('https://klbtheme.com/bacola/wp-content/uploads/2021/05/home-banner-15.jpg');
 }
+.banner-eggs {
+    background-image: url('https://klbtheme.com/bacola/wp-content/uploads/2021/05/bacola-banner-05.jpg');
+}
+.banner-taste {
+    background-image: url('https://klbtheme.com/bacola/wp-content/uploads/2021/05/bacola-banner-06.jpg');
+}
+.banner-ditch {
+    background-image: url('https://klbtheme.com/bacola/wp-content/uploads/2021/05/bacola-banner-10.jpg');
+}
+
 
 .banner-legumes {
     background-image: url('https://klbtheme.com/bacola/wp-content/uploads/2021/05/home-banner-16.jpg');
@@ -157,9 +179,23 @@ body {
     color: #333;
     width: 80%;
 }
+.category-banner-small .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: start;
+    color: #333;
+    width: 80%;
+}
 
 .banner-small h3 {
     font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.category-banner-small h3 {
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -167,6 +203,11 @@ body {
 .banner-small p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: #555;
+}
+.category-banner-small p {
+    font-size: 16px;
+    margin-bottom: 15px;
     color: #555;
 }
 
@@ -570,6 +611,61 @@ body {
     font-weight: 700;
 }
 
+
+
+.category-banner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+
+
+
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+
+
+.category-box {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    padding: 25px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.category-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.category-box img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.category-box h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.category-box p {
+    font-size: 14px;
+    color: #777;
+}
 /* Responsive */
 @media (max-width: 1200px) {
     .products-wrapper {
@@ -599,6 +695,9 @@ body {
 
 @media (max-width: 480px) {
     .products-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .categories {
         grid-template-columns: 1fr 1fr;
     }
 
